@@ -158,6 +158,3 @@ For Mistral this will look like this :
 **_NOTE:_**  For more information on the _host.docker.internal_ please refer to the docker [documentation](https://docs.docker.com/desktop/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host)
 
 You can now enjoy your local LLM instance within the Elastic AI Assistant
-
-Recording video  
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
