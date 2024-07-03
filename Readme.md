@@ -90,6 +90,22 @@ curl http://localhost:11434/v1/chat/completions \
 
 ```
 
+### Kibana Playground Specific
+
+If you are planning to use Kibana Playground, you will need to fake the model to one of the following one:
+
+1. gpt-3.5-turbo
+2. gpt-4o
+3. gpt-4-turbo
+
+For this, we are going to use Ollama [Modelfile](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) file to import the model.
+You'll find _Modelfile-Mistral_ example in the repository, you can adapt it per your need.
+Once done, you can execute the following command to expose the model as the name you've configured, ex. _gpt-4o_ :
+
+```bash
+ollama create gpt-4o -f Modelfile-Mistral
+```
+
 **_NOTE:_** If your Ollama server is running on a separated server, you will have to change the listen port to listen on all interface. for example on a Mac :
 
 ```bash
@@ -150,10 +166,10 @@ Finally you can create the connectors within Kibana UI. For this go to _Stack Ma
 Connectors are handled by Kibana, which in our case, is executed instide a docker and need to interact with Ollama, executed on the host. For Kibana to reach out to Ollama, we will need to use the following host : _host.docker.internal_
 
 For Llama3 this will look like this :
-![Elastic-agent Fortinet Integration](img/demo_local_ia_assistant_1.png)
+![Demo Local Assistant Connector - Llama3 ](img/demo_local_ia_assistant_1.png)
 
 For Mistral this will look like this :
-![Elastic-agent Fortinet Integration](img/demo_local_ia_assistant_2.png)
+![Demo Local Assistant Connector - Mistral](img/demo_local_ia_assistant_2.png)
 
 **_NOTE:_**  For more information on the _host.docker.internal_ please refer to the docker [documentation](https://docs.docker.com/desktop/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host)
 

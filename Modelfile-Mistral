@@ -1,0 +1,8 @@
+FROM mistral:latest
+
+# sets the context window size to 4096
+PARAMETER num_ctx 4096
+# sets the temperature to add more creativity
+PARAMETER temperature 0.8
+# sets the repeat_penalty to strongly to penalize repetitions
+PARAMETER repeat_penalty 1.5
