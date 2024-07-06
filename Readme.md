@@ -4,7 +4,8 @@
 * 1. [Description](#Description)
 * 2. [Requirements](#Requirements)
 	* 2.1. [Ollama](#Ollama)
-	* 2.2. [Elastic Stack](#ElasticStack)
+	* 2.2. [Kibana Playground Specific](#KibanaPlaygroundSpecific)
+	* 2.3. [Elastic Stack](#ElasticStack)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -43,7 +44,7 @@ You could adapt your architecture by running ollama directly in the docker-compo
 
 ```bash
 ollama pull mistral
-ollama spull llama3
+ollama pull llama3
 ```
 
 3. Test the two models
@@ -90,7 +91,7 @@ curl http://localhost:11434/v1/chat/completions \
 
 ```
 
-### Kibana Playground Specific
+###  2.2. <a name='KibanaPlaygroundSpecific'></a>Kibana Playground Specific
 
 If you are planning to use Kibana Playground, you will need to fake the model to one of the following one:
 
@@ -116,7 +117,7 @@ and restart Ollama application.
 
 For more information please refer to the Ollama [documentation](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-configure-ollama-server)
 
-###  2.2. <a name='ElasticStack'></a>Elastic Stack
+###  2.3. <a name='ElasticStack'></a>Elastic Stack
 
 1. Install Elastic stack
 
