@@ -127,6 +127,7 @@ simply clone the repository and start the stack
 
 ```bash
 git clone git@github.com:deviantony/docker-elk.git
+docker compose up setup
 docker compose up -d
 ```
 
