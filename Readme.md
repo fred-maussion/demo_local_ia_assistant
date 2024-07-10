@@ -167,6 +167,8 @@ Finally you can create the connectors within Kibana UI. For this go to _Stack Ma
 
 Connectors are handled by Kibana, which in our case, is executed instide a docker and need to interact with Ollama, executed on the host. For Kibana to reach out to Ollama, we will need to use the following host : _host.docker.internal_
 
+**_NOTE:_**  The connector is expecting to have an API Key configured to work. Ollama doesn't provide this feature so you can a random string and save the connector.
+
 For Llama3 this will look like this :
 ![Demo Local Assistant Connector - Llama3 ](img/demo_local_ia_assistant_1.png)
 
@@ -174,5 +176,6 @@ For Mistral this will look like this :
 ![Demo Local Assistant Connector - Mistral](img/demo_local_ia_assistant_2.png)
 
 **_NOTE:_**  For more information on the _host.docker.internal_ please refer to the docker [documentation](https://docs.docker.com/desktop/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host)
+
 
 You can now enjoy your local LLM instance within the Elastic AI Assistant
